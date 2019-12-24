@@ -1,15 +1,15 @@
 <template>
-  <van-list
+  <list
     :model="loading"
     :finished="finished"
     finished-text="没有更多了"
     @load="onLoad"
   >
-    <van-cell v-for="item in this.list" :key="item">
+    <cell v-for="item in this.list" :key="item">
       <div>hello</div>
       <div>world</div>
-    </van-cell>
-  </van-list>
+    </cell>
+  </list>
 </template>
 
 <script>
@@ -19,8 +19,8 @@ export default {
   name: "FilmList",
 
   components: {
-    vanList: List,
-    vanCell: Cell
+    List,
+    Cell
   },
 
   data() {
