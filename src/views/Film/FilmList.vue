@@ -1,18 +1,18 @@
 <template>
   <div>
-    <pull-refresh v-model="isTopFreshLoading" @refresh="onTopFresh">
-      <list
-        :model="isBottomFreshLoading"
-        :finished="isBottomFreshFinished"
-        finished-text="没有更多了"
-        @load="onBottomFresh"
-      >
+    <list
+      :model="isBottomFreshLoading"
+      :finished="isBottomFreshFinished"
+      finished-text="没有更多了"
+      @load="onBottomFresh"
+    >
+      <pull-refresh v-model="isTopFreshLoading" @refresh="onTopFresh">
         <cell v-for="item in this.list" :key="item">
           <div>hello</div>
           <div>world</div>
         </cell>
-      </list>
-    </pull-refresh>
+      </pull-refresh>
+    </list>
   </div>
 </template>
 
