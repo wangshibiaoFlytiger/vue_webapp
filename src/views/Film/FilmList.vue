@@ -1,7 +1,7 @@
 <template>
   <div>
     <van-list
-      :model="isBottomFreshLoading"
+      v-model="isBottomFreshLoading"
       :finished="isBottomFreshFinished"
       finished-text="没有更多了"
       @load="onBottomFresh"
@@ -45,7 +45,7 @@ export default {
      * 列表页底部刷新事件
      */
     onBottomFresh() {
-      console.log("onBottomFresh", this.list.length);
+      console.log("onBottomFresh", this.list.length, this.isBottomFreshLoading);
       this.list.push(this.list.length + 1);
 
       // 加载状态结束
@@ -61,7 +61,7 @@ export default {
      * 列表页顶部刷新事件
      */
     onTopFresh() {
-      console.log("onTopFresh", this.list.length);
+      console.log("onTopFresh", this.list.length, this.isTopFreshLoading);
 
       this.list = [this.list.length + 1].concat(this.list);
       this.isTopFreshLoading = false;
