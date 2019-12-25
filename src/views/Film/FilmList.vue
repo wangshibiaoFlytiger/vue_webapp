@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import FilmListItem from "@/views/Film/FilmListItem";
+import FilmListItem from "@/components/Film/FilmListItem";
 export default {
   name: "FilmList",
   components: { FilmListItem },
