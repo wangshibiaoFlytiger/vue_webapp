@@ -1,32 +1,24 @@
 <template>
   <div>
-    <list
+    <van-list
       :model="isBottomFreshLoading"
       :finished="isBottomFreshFinished"
       finished-text="没有更多了"
       @load="onBottomFresh"
     >
-      <pull-refresh v-model="isTopFreshLoading" @refresh="onTopFresh">
-        <cell v-for="item in list" :key="item">
+      <van-pull-refresh v-model="isTopFreshLoading" @refresh="onTopFresh">
+        <van-cell v-for="item in list" :key="item">
           <div>hello</div>
           <div>world</div>
-        </cell>
-      </pull-refresh>
-    </list>
+        </van-cell>
+      </van-pull-refresh>
+    </van-list>
   </div>
 </template>
 
 <script>
-import { List, Cell, PullRefresh } from "vant";
-
 export default {
   name: "FilmList",
-
-  components: {
-    List,
-    Cell,
-    PullRefresh
-  },
 
   data() {
     return {
