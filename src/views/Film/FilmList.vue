@@ -7,9 +7,8 @@
       @load="onBottomFresh"
     >
       <van-pull-refresh v-model="isTopFreshLoading" @refresh="onTopFresh">
-        <van-cell v-for="item in list" :key="item">
-          <div>hello</div>
-          <div>world</div>
+        <van-cell v-for="item in list" :key="item" @click="onListItemClick">
+          <div>{{ item }}</div>
         </van-cell>
       </van-pull-refresh>
     </van-list>
@@ -65,6 +64,13 @@ export default {
 
       this.list = [this.list.length + 1].concat(this.list);
       this.isTopFreshLoading = false;
+    },
+
+    /**
+     * 列表项单击事件
+     */
+    onListItemClick() {
+      this.$router.push({ name: "filmDetail" });
     }
   }
 };
