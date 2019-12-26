@@ -3,8 +3,8 @@
     <router-view />
 
     <!--    底部导航菜单-->
-    <tabbar v-model="tabbarValue">
-      <tabbar-item name="film">
+    <van-tabbar v-model="tabbarValue">
+      <van-tabbar-item name="film">
         <span>电影</span>
         <img
           slot="icon"
@@ -15,8 +15,8 @@
               : tabbarIcons.film.inactiveIcon
           "
         />
-      </tabbar-item>
-      <tabbar-item name="news">
+      </van-tabbar-item>
+      <van-tabbar-item name="news">
         <span>新闻</span>
         <img
           slot="icon"
@@ -27,19 +27,13 @@
               : tabbarIcons.news.inactiveIcon
           "
         />
-      </tabbar-item>
-    </tabbar>
+      </van-tabbar-item>
+    </van-tabbar>
   </div>
 </template>
 
 <script>
-import { Tabbar, TabbarItem } from "vant";
 export default {
-  components: {
-    Tabbar,
-    TabbarItem
-  },
-
   data() {
     return {
       // tabbar相关
