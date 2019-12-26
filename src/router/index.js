@@ -1,6 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import FilmList from "@/views/Film/FilmList";
+import FilmDetail from "@/views/Film/FilmDetail";
+import Player from "@/views/Video/Player";
 
 Vue.use(VueRouter);
 
@@ -10,10 +12,24 @@ const routes = [
     name: "home",
     redirect: "/film/filmList"
   },
+
+  // film相关
   {
     path: "/film/filmList",
     name: "filmList",
     component: FilmList
+  },
+  {
+    path: "/film/filmDetail",
+    name: "filmDetail",
+    component: FilmDetail
+  },
+
+  // video相关
+  {
+    path: "/video/player",
+    name: "player",
+    component: Player
   }
 ];
 

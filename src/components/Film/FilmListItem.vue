@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div @click="onListItemClick">
     <div>
       <van-row>
         <van-col span="12">{{ item.title }}</van-col>
@@ -27,7 +27,20 @@ export default {
 
   mounted() {},
 
-  methods: {}
+  methods: {
+    /**
+     * ListItem组件的单击事件
+     */
+    onListItemClick() {
+      // 跳转到详情页
+      this.$router.push({
+        name: "filmDetail",
+        query: {
+          filmId: this.item.id
+        }
+      });
+    }
+  }
 };
 </script>
 
