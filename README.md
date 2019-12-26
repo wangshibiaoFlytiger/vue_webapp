@@ -1,3 +1,14 @@
+项目原始仓库地址: https://github.com/wangshibiaoFlytiger/vue_webapp #若本项目给您带来收获, 还请您动动小拇指,右上角给点个赞哈,万分感谢哈哈!!!
+
+基于 vue 的 webapp 开发脚手架, 用到的技术栈:
+
+1. vue-router
+   用于路由管理
+2. vuex
+   用户组件的状态管理
+3. vant
+   是现有开源的 ui 组件库中推荐的一款, 其他组件库经测试都不支持 vue-cli3
+
 一. 创建工程
 执行命令 vue create vue_webapp
 创建选项如下:
